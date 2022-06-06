@@ -1,23 +1,23 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import config from './util/config';
 import { main } from './routes/route';
 import { connectDB } from './util/connection';
-
+import  {SyncDB}  from './controllers/UserController';
+import { ModelUser } from './models/User';
 export const app = express();
 dotenv.config()
 
 
-connectDB()
+connectDB();
 
-//examples
-const port = config.PORT;
-const numb = config.number;
-const name = config.string;
+SyncDB();
+
 
 main();
 
+
+const port = config.PORT
 app.listen(port, ()=> {
     console.log('\nServer running in ----> "http://localhost:3000"\n')
 })
