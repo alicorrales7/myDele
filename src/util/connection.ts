@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { ModelUser } from "../models/User";
+
 
 
 export async function connectDB() {
