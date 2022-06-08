@@ -1,7 +1,8 @@
 import { prop, getModelForClass } from "@typegoose/typegoose"
+import { Product } from "./product"
 
 
-class house {
+class house extends Product{
 
     @prop()
     adress:string
@@ -20,7 +21,6 @@ class house {
 
     @prop()
     parking:number
-    
 }
 
 const houseModel = getModelForClass(house)
@@ -32,7 +32,8 @@ export async function Add_house() {
         bathrooms: 2,
         pool: 1,
         kitchen:1,
-        parking: 2
+        parking: 2,
+        price: 500000
     }
     )
 }

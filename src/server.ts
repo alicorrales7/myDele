@@ -3,13 +3,17 @@ import dotenv from 'dotenv';
 import config from './util/config';
 import { main } from './routes/route';
 import { connectDB } from './util/connection';
+import { Add_User, insert_One } from './models/User';
+import {UpdateMany_User} from './models/User'
+import { Find_User } from './models/User';
 
 
 export const app = express();
 dotenv.config()
+connectDB()
 
+UpdateMany_User()
 
-connectDB();
 
 main();
 

@@ -1,23 +1,18 @@
 import { prop, getModelForClass } from "@typegoose/typegoose"
+import { Product } from "./product"
 
 
-class Car {
+class Car extends Product{
 
     @prop()
     model:string
-
-    @prop()
-    year:number
 
     @prop()
     doors:number
 
     @prop()
     motor: string
-
-    @prop()
-    color:string
-
+    
     @prop()
     typeCar:string
 
@@ -36,7 +31,8 @@ export async function Add_Car() {
         motor: "ZR3456",
         color: "Black",
         typeCar: "SUV",
-        wheel: 4
+        wheel: 4,
+        price:2000
     })
     await car.save();
 }

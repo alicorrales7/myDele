@@ -1,14 +1,11 @@
 import { prop, getModelForClass } from "@typegoose/typegoose"
+import { Product } from "./product"
 
 
-
-class Phone {
+class Phone extends Product{
 
     @prop()
     model:number
-
-    @prop()
-    year:number
 
     @prop()
     color:string
@@ -33,7 +30,8 @@ export async function Add_Phone() {
         color: "blue",
         capacity: "512 GB",
         ram: 6,
-        connectity: "5G"
+        connectity: "5G",
+        price: 950
 
     })
     
