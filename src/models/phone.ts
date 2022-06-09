@@ -1,14 +1,11 @@
 import { prop, getModelForClass } from "@typegoose/typegoose"
-import { Product } from "./product"
+import { userModel } from "./User"
 
 
-class Phone extends Product{
+class Phone {
 
     @prop()
     model:number
-
-    @prop()
-    color:string
 
     @prop()
     capacity: string
@@ -18,6 +15,18 @@ class Phone extends Product{
 
     @prop()
     connectity:string
+
+    @prop({required:true})
+    title: string
+
+    @prop()
+    price: number
+
+    @prop()
+    year: number
+
+    @prop()
+    color: string
     
 }
 
