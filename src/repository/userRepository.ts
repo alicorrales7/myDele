@@ -1,10 +1,9 @@
 import { Service, Container } from "typedi";
 import { userModel } from "../models/User";
-
-
+import { Repository } from "../interface/repository";
 
 @Service()
-class UserRepository {
+class UserRepository implements Repository{
     
     
     async find(){
@@ -13,33 +12,28 @@ class UserRepository {
     }
 
     //Resolve the id conversion
-    async findById(userId:string) {
-        const convert = {"id":userId}
-        const userfindById = await userModel.findById('62a8f231d9f274bde636ad14');
+    async findById(id:string) {
+        const convert = {"_id":id}
+        const userfindById = await userModel.findById(convert);
         console.log(convert);
-
-        for(var key in userfindById){
-            if(userfindById.hasOwnProperty(key)){
-                console.log("La clave es: " + key + " el valor es "  )
-            }
-        }
-        
         return userfindById;
     }
 
-    async insert(user: JSON) {
-        const usersInserts = await userModel.insertMany(user)
+    async insert(document: JSON) {
+        const usersInserts = await userModel.insertMany(document);
+        return usersInserts;
     }
 
-    async update(username:string, user:JSON){
-        const convert = {"username":username}
-        const userUbdate = await userModel.updateMany(convert,user)
+    async update(id:string, document:JSON){
+        const convert = {"_id":id}
+        const userUbdate = await userModel.updateMany(convert,document);
+        return userUbdate;
     }
 
-    async delete(username:string) {
-        const convert = {"username":username}
-        const userDelete = await userModel.deleteMany(convert)
-        
+    async delete(id:string) {
+        const convert = {"_id":id}
+        const userDelete = await userModel.deleteMany(convert);
+        return userDelete;
     }
     }
 

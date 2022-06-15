@@ -2,7 +2,7 @@ import { prop, getModelForClass } from "@typegoose/typegoose"
 
 
 
-class Car {
+class Cars {
 
     @prop()
     model:string
@@ -33,5 +33,5 @@ class Car {
     
 }
 
-export const CarModel = getModelForClass(Car)
+export const CarModel = getModelForClass(Cars)
 

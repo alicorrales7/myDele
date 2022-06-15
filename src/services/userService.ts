@@ -9,26 +9,25 @@ class UserService{
     constructor(private readonly userRepository: UserRepository, autorization:string){}
 
     async getAllUsers(){
-        
         const resultGetAllUser = this.userRepository.find()
         return resultGetAllUser;
     }
 
-    async getUser(userId:string){
-        const resultGetUser = this.userRepository.findById(userId);
+    async getUser(id:string){
+        const resultGetUser = this.userRepository.findById(id);
         return resultGetUser;
     }
 
-    async insertUsers(user:JSON){
-        const resultInsert = this.userRepository.insert(user)
+    async insertUsers(document:JSON){
+        const resultInsert = this.userRepository.insert(document)
     }
 
-    async updateUser(username:string, user:JSON){
-        const resultUpdate = this.userRepository.update(username,user)
+    async updateUser(id:string, document:JSON){
+        const resultUpdate = this.userRepository.update(id,document)
     }
 
-    async deleteUser(username:string){
-        const resultDelete = this.userRepository.delete(username)
+    async deleteUser(id:string){
+        const resultDelete = this.userRepository.delete(id)
     }
 }
 

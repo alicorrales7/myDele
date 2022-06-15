@@ -2,7 +2,7 @@ import { prop, getModelForClass } from "@typegoose/typegoose"
 import { userModel } from "./User"
 
 
-class Phone {
+class Phones {
 
     @prop()
     model:number
@@ -30,39 +30,5 @@ class Phone {
     
 }
 
-export const phoneModel = getModelForClass(Phone)
+export const phoneModel = getModelForClass(Phones)
 
-export async function Add_Phone() {
-    const phone = new phoneModel()
-    
-}
-
-
-export async function Find_Phone() {
-
-    const phone_search = await phoneModel.find()
-    
-    return phone_search;
-}
-
-export async function Update_Phone() {
-    //find the user that has this id, and update this property
-    const phone_findOneAndUpdate = await phoneModel.findByIdAndUpdate()       
-}
-
-export async function UpdateMany_Phone() {
-    
-    const phone_updateMany = await phoneModel.updateMany()
-}
-
-export async function Delete_Phone() {
-    const phone_Delete = await phoneModel.findByIdAndRemove()
-}
-
-
-
-
-export async function insert_One() {
-    const user = new userModel()
-    
-}
