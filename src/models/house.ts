@@ -1,8 +1,8 @@
 import { prop, getModelForClass } from "@typegoose/typegoose"
-import { Product } from "./product"
 
 
-class house extends Product{
+
+class house {
 
     @prop()
     adress:string
@@ -21,6 +21,18 @@ class house extends Product{
 
     @prop()
     parking:number
+
+    @prop({required:true})
+    title: string
+
+    @prop()
+    price: number
+
+    @prop()
+    year: number
+
+    @prop()
+    color: string
 }
 
 const houseModel = getModelForClass(house)
