@@ -17,9 +17,16 @@ class UserController{
         return res.json(resultGetUser)
     }
 
+    async getAllProducts(req:Request, res:Response){
+        const user = req.params.id;
+        const resultGetProducts = await this.userService.getProducts(user)
+        return res.json(resultGetProducts)
+        
+    }
+
     async insertUsers(req:Request, res:Response){
         const resultInsert = await this.userService.insertUsers(req.body);
-        return res.json(resultInsert)
+        return res.status(201).json(resultInsert)
     }
 
     async updateUser(req:Request, res:Response){

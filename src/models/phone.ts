@@ -27,6 +27,9 @@ class Phones {
 
     @prop()
     color: string
+
+    @prop()
+    username: string
     
 }
 

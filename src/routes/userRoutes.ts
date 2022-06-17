@@ -13,9 +13,14 @@ export function userRoutes(){
         const find = userController.getAllUsers(res)
         console.log(find)
     })
-    
+
+    app.get('/userproduct/:id', (req,res) => {
+        const findProducts = userController.getAllProducts(req, res)
+        console.log(findProducts)
+    })
+
     app.get('/user/:id', (req,res) => {
-        const findOne = userController.getUser( req,res)    
+        const findOne = userController.getUser( req,res)  
     })
 
     app.post('/user', (req,res) => {
@@ -32,5 +37,7 @@ export function userRoutes(){
         console.log("Delete Successful")
         
     })
+
+    
 
 }

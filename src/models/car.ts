@@ -30,6 +30,9 @@ class Cars {
 
     @prop()
     color: string
+
+    @prop({required:true})
+    username: string
     
 }
 

@@ -18,6 +18,11 @@ class UserService{
         return resultGetUser;
     }
 
+    async getProducts(id:string){
+        const resultGetProducts = this.userRepository.findByIdProducts(id);
+        return resultGetProducts;
+    }
+
     async insertUsers(document:JSON){
         const resultInsert = this.userRepository.insert(document)
     }

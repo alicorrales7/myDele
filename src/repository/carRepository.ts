@@ -1,6 +1,7 @@
 import { Service } from "typedi";
 import { Repository } from "../interface/repository";
 import { CarModel } from "../models/Car";
+import { userModel } from "../models/User";
 
 @Service()
 class CarRepository implements Repository{
@@ -13,12 +14,19 @@ class CarRepository implements Repository{
     async findById(id: string) {
         const convert = { "_id": id }
         const carfindById = await CarModel.findById(convert);
-        console.log(convert);
         return carfindById;
     }
 
     async insert(document: JSON) {
         const carInserts = await CarModel.insertMany(document);
+        const firstDocument = carInserts[0]
+        const userPublication = firstDocument?.username
+        
+        for(let i of carInserts){
+            const insertUserModel = await userModel.updateMany({username:userPublication},{
+                $push:{publications: i?.id}
+            })
+        }
         return carInserts;
     }
 

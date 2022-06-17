@@ -33,6 +33,9 @@ class Houses {
 
     @prop()
     color: string
+
+    @prop()
+    username: string
 }
 
 export const houseModel = getModelForClass(Houses)

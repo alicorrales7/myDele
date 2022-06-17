@@ -30,6 +30,9 @@ class Users {
     @prop({ required: true, minlength: 8 })
     password: string
 
+    @prop()
+    publications:string[]
+
 
 }
 

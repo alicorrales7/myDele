@@ -1,6 +1,7 @@
 import { Service } from "typedi";
 import { Repository } from "../interface/repository";
 import { phoneModel } from "../models/Phone";
+import { userModel } from "../models/User";
 
 @Service()
 class PhoneRepository implements Repository{
@@ -19,6 +20,14 @@ class PhoneRepository implements Repository{
 
     async insert(document: JSON) {
         const phoneInserts = await phoneModel.insertMany(document);
+        const firstDocument = phoneInserts[0];
+        const userPublication = firstDocument?.username
+
+        for(let i of phoneInserts){
+            const insertUserModel = await userModel.updateMany({username:userPublication},{
+                $push:{publications: i?.id}
+            })
+        }
         return phoneInserts;
     }
 
