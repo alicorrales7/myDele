@@ -2,7 +2,7 @@ import { prop, getModelForClass } from "@typegoose/typegoose"
 import { userModel } from "./User"
 
 
-class Phones {
+export class Phones {
 
     @prop()
     model:number
@@ -28,8 +28,8 @@ class Phones {
     @prop()
     color: string
 
-    @prop()
-    username: string
+    @prop({required:true})
+    userId: string
     
 }
 

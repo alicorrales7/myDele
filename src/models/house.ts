@@ -2,7 +2,7 @@ import { prop, getModelForClass } from "@typegoose/typegoose"
 
 
 
-class Houses {
+export class Houses {
 
     @prop()
     adress:string
@@ -34,8 +34,8 @@ class Houses {
     @prop()
     color: string
 
-    @prop()
-    username: string
+    @prop({required:true})
+    userId: string
 }
 
 export const houseModel = getModelForClass(Houses)

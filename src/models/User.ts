@@ -1,5 +1,7 @@
 import { prop, getModelForClass, Ref } from "@typegoose/typegoose"
 import { CarModel, Cars } from "./Car"
+import { Houses } from "./House"
+import { Phones } from "./Phone"
 
 
 export class Users {
@@ -32,7 +34,13 @@ export class Users {
     password: string
 
     @prop({ref: ()=> Cars })
-    public product: Ref <Cars>[];
+    public productCars: Ref <Cars>[];
+
+    @prop({ref: ()=> Houses })
+    public productHouses: Ref <Houses>[];
+
+    @prop({ref: ()=> Phones })
+    public productPhones: Ref <Phones>[];
 
 
 }

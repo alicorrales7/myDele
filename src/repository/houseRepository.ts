@@ -21,11 +21,12 @@ class HouseRepository implements Repository{
     async insert(document: JSON) {
         const houseInserts = await houseModel.insertMany(document);
         const firstDocument = houseInserts[0]
-        const userPublication = firstDocument?.username
+        const userId = firstDocument?.userId
+        
         
         for(let i of houseInserts){
-            const insertUserModel = await userModel.updateMany({username:userPublication},{
-                $push:{publications: i?.id}
+            const insertUserModel = await userModel.updateMany({_id:userId},{
+                $push:{productHouses: i?.id}
             })
         }
         return houseInserts;

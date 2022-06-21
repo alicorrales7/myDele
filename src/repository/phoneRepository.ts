@@ -21,11 +21,12 @@ class PhoneRepository implements Repository{
     async insert(document: JSON) {
         const phoneInserts = await phoneModel.insertMany(document);
         const firstDocument = phoneInserts[0];
-        const userPublication = firstDocument?.username
+        const userId = firstDocument?.userId
+        
 
         for(let i of phoneInserts){
-            const insertUserModel = await userModel.updateMany({username:userPublication},{
-                $push:{publications: i?.id}
+            const insertUserModel = await userModel.updateMany({_id:userId},{
+                $push:{productPhones: i?.id}
             })
         }
         return phoneInserts;

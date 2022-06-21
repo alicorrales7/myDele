@@ -21,10 +21,11 @@ class CarRepository implements Repository{
         const carInserts = await CarModel.insertMany(document);
         const firstDocument = carInserts[0]
         const userId = firstDocument?.userId
+        console.log(firstDocument.userId)
         
         for(let i of carInserts){
-            const insertUserModel = await userModel.updateMany({id:userId},{
-                $push:{publications: i?.id}
+            const insertUserModel = await userModel.updateMany({_id:userId},{
+                $push:{productCars: i?.id}
             })
         }
         return carInserts;
