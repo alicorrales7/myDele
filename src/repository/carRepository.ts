@@ -20,10 +20,10 @@ class CarRepository implements Repository{
     async insert(document: JSON) {
         const carInserts = await CarModel.insertMany(document);
         const firstDocument = carInserts[0]
-        const userPublication = firstDocument?.username
+        const userId = firstDocument?.userId
         
         for(let i of carInserts){
-            const insertUserModel = await userModel.updateMany({username:userPublication},{
+            const insertUserModel = await userModel.updateMany({id:userId},{
                 $push:{publications: i?.id}
             })
         }

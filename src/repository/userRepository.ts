@@ -26,7 +26,9 @@ class UserRepository implements Repository{
 
     async findByIdProducts(id:string){
         const convert = {"_id":id}
-
+        const findAllProduct = await userModel.findById(convert, {product:true}).populate('product')
+        console.log(id,findAllProduct)
+        return findAllProduct;
     }
 
     async insert(document: JSON) {

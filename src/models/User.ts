@@ -1,7 +1,8 @@
-import { prop, getModelForClass } from "@typegoose/typegoose"
+import { prop, getModelForClass, Ref } from "@typegoose/typegoose"
+import { CarModel, Cars } from "./Car"
 
 
-class Users {
+export class Users {
 
     @prop({ require: true })
     name: string
@@ -30,8 +31,8 @@ class Users {
     @prop({ required: true, minlength: 8 })
     password: string
 
-    @prop()
-    publications:string[]
+    @prop({ref: ()=> Cars })
+    public product: Ref <Cars>[];
 
 
 }
