@@ -1,10 +1,13 @@
 import { Service } from "typedi";
+import { phoneDTO } from "../dto/phoneDTO";
 import PhoneRepository from "../repository/phoneRepository";
+import { PhoneMap } from "../util/mapper/phoneMap";
 
 @Service()
 class PhoneService{
 
-    constructor(private readonly phoneRepository: PhoneRepository){}
+    constructor(private readonly phoneRepository: PhoneRepository,
+        private phoneMap: PhoneMap){}
 
     async getAllPhone(){
         const resultGetAllCar = this.phoneRepository.find()
@@ -16,8 +19,9 @@ class PhoneService{
         return PhoneRepository;
     }
 
-    async insertPhone (document:JSON){
-        const resultInsert = this.phoneRepository.insert(document)
+    async insertPhone (document:phoneDTO){
+        const transp = this.phoneMap.mapJsonToEntity(document)
+        const resultInsert = this.phoneRepository.insert(transp)
     }
 
     async updatePhone(id:string, document:JSON){

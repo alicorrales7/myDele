@@ -1,24 +1,32 @@
 import { Service } from "typedi";
+import { HouseDOT } from "../dto/houseDTO";
 import { houseModel } from "../models/House";
-import { phoneModel } from "../models/Phone";
 import { userModel } from "../models/User";
+import { HouseMap } from "../util/mapper/houseMap";
 
 @Service()
 class HouseRepository {
+    constructor(private houseMap: HouseMap){}
 
     async find() {
         const find = await houseModel.find()
-        return find;
+        const carArray: HouseDOT[] = [];
+
+        for (let i of find) {
+            const vol = this.houseMap.mapEntityToDto(i)
+            carArray.push(vol)
+        }
+        return carArray;
     }
 
-    async findById(id: string) {
+    async findById(id: string):Promise< HouseDOT | null> {
         const convert = { "_id": id }
         const housefindById = await houseModel.findById(convert);
-        console.log(convert);
-        return housefindById;
+        const returnDto = this.houseMap.mapEntityToDto(housefindById)
+        return returnDto;
     }
 
-    async insert(document: JSON) {
+    async insert(document: HouseDOT) {
         const houseInserts = await houseModel.insertMany(document);
         const firstDocument = houseInserts[0]
         const userId = firstDocument?.userId
@@ -54,7 +62,7 @@ class HouseRepository {
         }
         console.log(arrayFor);
         const updateUser = await userModel.updateOne({"_id":userId},{$set:{productHouses:arrayFor}});
-        const phoneDelete = await phoneModel.deleteMany(convert);
+        const phoneDelete = await houseModel.deleteMany(convert);
         return phoneDelete;
     }
 }

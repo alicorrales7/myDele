@@ -1,24 +1,31 @@
 import { Service, Container } from "typedi";
 import { userModel } from "../models/User";
+import { UserMap } from "../util/mapper/userMap";
+import { UserDTO } from "../dto/userDTO";
 
 
 @Service()
 class UserRepository {
+    constructor(private userMap: UserMap){}
     
     
     async find(){
         const find = await userModel.find()
-        return find;
+        const carArray: UserDTO[] = [];
+
+        for (let i of find) {
+            const vol = this.userMap.mapEntityToDto(i)
+            carArray.push(vol)
+        }
+        return carArray;
     }
 
     //Resolve the id conversion
-    async findById(id:string) {
+    async findById(id:string): Promise < UserDTO | null> {
         const convert = {"_id":id}
         const userfindById = await userModel.findById(convert);
-        const iD = userfindById?._id
-        const a = iD.toString()
-        console.log(a + " aqui es la buena")
-        return userfindById;
+        const returnDto = this.userMap.mapEntityToDto(userfindById)
+        return returnDto;
     }
 
     async findByIdProducts(id:string){
@@ -29,7 +36,7 @@ class UserRepository {
         return findAllProduct;
     }
 
-    async insert(document: JSON) {
+    async insert(document: UserDTO) {
         const usersInserts = await userModel.insertMany(document);
         return usersInserts;
     }

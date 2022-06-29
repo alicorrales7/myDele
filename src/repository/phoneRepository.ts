@@ -1,28 +1,37 @@
 import { Service } from "typedi";
+import { phoneDTO } from "../dto/phoneDTO";
 import { phoneModel } from "../models/Phone";
 import { userModel } from "../models/User";
+import { PhoneMap } from "../util/mapper/phoneMap";
 
 @Service()
 class PhoneRepository {
+    constructor(private phoneMap: PhoneMap){}
 
     async find() {
         const find = await phoneModel.find()
-        return find;
+        const carArray: phoneDTO[] = [];
+
+        for (let i of find) {
+            const vol = this.phoneMap.mapEntityToDto(i)
+            carArray.push(vol)
+        }
+        return carArray;
     }
 
-    async findById(id: string) {
+    async findById(id: string):Promise<phoneDTO | null> {
         const convert = { "_id": id }
         const phonefindById = await phoneModel.findById(convert);
-        console.log(convert);
-        return phonefindById;
+        const returnDto = this.phoneMap.mapEntityToDto(phonefindById)
+
+        return returnDto;
     }
 
-    async insert(document: JSON) {
+    async insert(document: phoneDTO) {
         const phoneInserts = await phoneModel.insertMany(document);
         const firstDocument = phoneInserts[0];
         const userId = firstDocument?.userId
         
-
         for(let i of phoneInserts){
             const insertUserModel = await userModel.updateMany({_id:userId},{
                 $push:{productPhones: i?.id}
@@ -30,6 +39,7 @@ class PhoneRepository {
         }
         return phoneInserts;
     }
+
 
     async update(id: string, document: JSON) {
         const convert = { "_id": id }
@@ -50,7 +60,6 @@ class PhoneRepository {
                 arrayFor.push(i)
             }
         }
-        console.log(arrayFor);
         const updateUser = await userModel.updateOne({"_id":userId},{$set:{productPhones:arrayFor}});
         const phoneDelete = await phoneModel.deleteMany(convert);
         return phoneDelete;

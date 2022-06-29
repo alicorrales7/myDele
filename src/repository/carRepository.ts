@@ -1,9 +1,9 @@
 import { TypedMapper } from "typed-mapper";
 import { Service } from "typedi";
-import { CarModel, Cars } from "../models/Car";
+import { CarModel} from "../models/Car";
 import { userModel } from "../models/User";
 import { CarDTO } from "../dto/carDTO";
-import { CarMap } from "../util/mapping";
+import { CarMap } from "../util/mapper/carMap";
 
 
 @Service()
@@ -35,7 +35,6 @@ class CarRepository {
         const carInserts = await CarModel.insertMany(document);
         const firstDocument = carInserts[0]
         const userId = firstDocument?.userId
-        console.log(firstDocument.userId)
 
         for (let i of carInserts) {
             const insertUserModel = await userModel.updateMany({ _id: userId }, {
@@ -65,7 +64,6 @@ class CarRepository {
                 arrayFor.push(i)
             }
         }
-        console.log(arrayFor);
         const updateUser = await userModel.updateOne({"_id":userId},{$set:{productCars:arrayFor}});
         const carDelete = await CarModel.deleteMany(convert);
         return carDelete;

@@ -1,8 +1,7 @@
 import { Request,Response } from "express";
 import { Service } from "typedi";
-import { Cars } from "../models/Car";
 import CarService from "../services/carService";
-import { CarMap } from "../util/mapping";
+import { CarMap } from "../util/mapper/carMap";
 
 @Service()
 class CarController{

@@ -1,11 +1,11 @@
 import { Service } from "typedi";
-import { CarDTO } from "../dto/carDTO";
-import { CarModel, Cars } from "../models/Car";
+import { CarDTO } from "../../dto/carDTO";
+import { Car } from "../../models/Car";
 
 @Service()
 export class CarMap{
 
-    mapEntityToDto(t:Cars|null):CarDTO{
+    mapEntityToDto(t:Car|null):CarDTO{
         const mapper = {
             model: t?.model,
             doors: t?.doors,

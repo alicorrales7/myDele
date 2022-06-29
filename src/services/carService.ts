@@ -1,7 +1,7 @@
 import { Service } from "typedi";
 import { CarDTO } from "../dto/carDTO";
 import CarRepository from "../repository/carRepository";
-import { CarMap } from "../util/mapping";
+import { CarMap } from "../util/mapper/carMap";
 
 @Service()
 class CarService{

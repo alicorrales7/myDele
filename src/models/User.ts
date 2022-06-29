@@ -1,10 +1,10 @@
 import { prop, getModelForClass, Ref } from "@typegoose/typegoose"
-import { Cars } from "./Car";
-import { Houses } from "./House";
-import { Phones } from "./Phone";
+import { Car } from "./Car";
+import { House } from "./House";
+import { Phone } from "./Phone";
 
 
-export class Users {
+export class User {
 
     @prop({ require: true })
     name: string
@@ -33,19 +33,19 @@ export class Users {
     @prop({ required: true, minlength: 8 })
     password: string
 
-    @prop({ref: ()=> Cars })
-    public productCars: Ref <Cars>[];
+    @prop({ref: ()=> Car })
+    public productCars: Ref <Car>[];
 
-    @prop({ref: ()=> Houses })
-    public productHouses: Ref <Houses>[];
+    @prop({ref: ()=> House })
+    public productHouses: Ref <House>[];
 
-    @prop({ref: ()=> Phones })
-    public productPhones: Ref <Phones>[];
+    @prop({ref: ()=> Phone })
+    public productPhones: Ref <Phone>[];
 
 
 }
 
-export const userModel = getModelForClass(Users)
+export const userModel = getModelForClass(User)
 
 
 

@@ -1,10 +1,13 @@
 import { Service } from "typedi";
+import { HouseDOT } from "../dto/houseDTO";
 import HouseRepository from "../repository/houseRepository";
+import { HouseMap } from "../util/mapper/houseMap";
 
 @Service()
 class HouseService{
 
-    constructor(private readonly houseRepository: HouseRepository){}
+    constructor(private readonly houseRepository: HouseRepository,
+        private houseMap: HouseMap){}
 
     async getAllHouse(){
         const resultGetAllHouse = this.houseRepository.find()
@@ -16,8 +19,9 @@ class HouseService{
         return resultGetHouse;
     }
 
-    async insertHouse (document:JSON){
-        const resultInsert = this.houseRepository.insert(document)
+    async insertHouse (document:HouseDOT){
+        const transp = this.houseMap.mapJsonToEntity(document)
+        const resultInsert = this.houseRepository.insert(transp)
     }
 
     async updateHouse(id:string, document:JSON){

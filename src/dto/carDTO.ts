@@ -1,8 +1,4 @@
 import { Entity, SafeType } from "dto-mapping"
-import { Service } from "typedi"
-import { Cars } from "../models/Car"
-
-
 @Entity()
 export class CarDTO{
     @SafeType({type:String})

@@ -1,12 +1,14 @@
-import { Inject, Service } from "typedi";
-import { userModel } from "../models/User";
+import {  Service } from "typedi";
 import UserRepository from "../repository/userRepository";
+import { UserDTO } from "../dto/userDTO";
+import { UserMap } from "../util/mapper/userMap";
 
 @Service()
 class UserService{
     
 
-    constructor(private readonly userRepository: UserRepository, autorization:string){}
+    constructor(private readonly userRepository: UserRepository, 
+        private userMap: UserMap){}
 
     async getAllUsers(){
         const resultGetAllUser = this.userRepository.find()
@@ -23,8 +25,9 @@ class UserService{
         return resultGetProducts;
     }
 
-    async insertUsers(document:JSON){
-        const resultInsert = this.userRepository.insert(document)
+    async insertUsers(document:UserDTO){
+        const transp = this.userMap.mapJsonToEntity(document)
+        const resultInsert = this.userRepository.insert(transp)
     }
 
     async updateUser(id:string, document:JSON){
