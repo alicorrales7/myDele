@@ -1,5 +1,6 @@
 import { Service } from "typedi";
 import { houseModel } from "../models/House";
+import { phoneModel } from "../models/Phone";
 import { userModel } from "../models/User";
 
 @Service()
@@ -38,10 +39,23 @@ class HouseRepository {
     }
 
     async delete(id: string) {
-        const convert = { "_id": id }
-        const houseDelete = await houseModel.deleteMany(convert)
-        return houseDelete;
-
+        const convert = { "_id": id };
+        const house = await houseModel.findById(id);
+        
+        const userId = house?.userId;
+        const arrayC = await userModel.find({"_id":userId},{productHouses:true,_id:false});
+        const arrayp = arrayC[0];
+        const a = arrayp.productHouses;
+        const arrayFor = [];
+        for(let i of a ){
+            if(i?.toString() != id){
+                arrayFor.push(i)
+            }
+        }
+        console.log(arrayFor);
+        const updateUser = await userModel.updateOne({"_id":userId},{$set:{productHouses:arrayFor}});
+        const phoneDelete = await phoneModel.deleteMany(convert);
+        return phoneDelete;
     }
 }
 

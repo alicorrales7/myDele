@@ -54,17 +54,20 @@ class CarRepository {
     async delete(id: string) {
         const convert = { "_id": id };
         const car = await CarModel.findById(id);
+        
         const userId = car?.userId;
-        const array = await userModel.find({ "_id": userId }, { productCars: true });
-        const arrayUpdate = [];
-        for (let i of array) {
-            if (i.id != car?.id) {
-                arrayUpdate.push(i);
+        const arrayC = await userModel.find({"_id":userId},{productCars:true,_id:false});
+        const arrayp = arrayC[0];
+        const a = arrayp.productCars;
+        const arrayFor = [];
+        for(let i of a ){
+            if(i?.toString() != id){
+                arrayFor.push(i)
             }
         }
-        const updateUser = await userModel.updateOne({ "_id": userId }, { $set: { productCars: arrayUpdate } });
+        console.log(arrayFor);
+        const updateUser = await userModel.updateOne({"_id":userId},{$set:{productCars:arrayFor}});
         const carDelete = await CarModel.deleteMany(convert);
-
         return carDelete;
 
     }

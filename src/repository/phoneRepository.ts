@@ -38,10 +38,22 @@ class PhoneRepository {
     }
 
     async delete(id: string) {
-        const convert = { "_id": id }
-        const phoneDelete = await phoneModel.deleteMany(convert)
+        const convert = { "_id": id };
+        const phone = await phoneModel.findById(id);
+        const userId = phone?.userId;
+        const arrayC = await userModel.find({"_id":userId},{productPhones:true,_id:false});
+        const arrayp = arrayC[0];
+        const a = arrayp.productPhones;
+        const arrayFor = [];
+        for(let i of a ){
+            if(i?.toString() != id){
+                arrayFor.push(i)
+            }
+        }
+        console.log(arrayFor);
+        const updateUser = await userModel.updateOne({"_id":userId},{$set:{productPhones:arrayFor}});
+        const phoneDelete = await phoneModel.deleteMany(convert);
         return phoneDelete;
-
     }
 }
 
