@@ -1,10 +1,9 @@
 import { Service } from "typedi";
-import { Repository } from "../interface/repository";
 import { phoneModel } from "../models/Phone";
 import { userModel } from "../models/User";
 
 @Service()
-class PhoneRepository implements Repository{
+class PhoneRepository {
 
     async find() {
         const find = await phoneModel.find()

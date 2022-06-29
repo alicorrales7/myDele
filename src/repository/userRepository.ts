@@ -1,16 +1,13 @@
 import { Service, Container } from "typedi";
 import { userModel } from "../models/User";
-import { Repository } from "../interface/repository";
-import { CarModel } from "../models/Car";
-import { houseModel } from "../models/House";
-import { phoneModel } from "../models/Phone";
+
+
 @Service()
-class UserRepository implements Repository{
+class UserRepository {
     
     
     async find(){
         const find = await userModel.find()
-        const other = await userModel.find({sex:"male"},{_id:true})
         return find;
     }
 

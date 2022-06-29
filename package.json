@@ -17,11 +17,13 @@
     "@types/morgan": "^1.9.3",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
+    "dto-mapping": "^1.1.0",
     "express": "^4.18.1",
     "mongodb": "^4.6.0",
     "mongoose": "^6.3.5",
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.1.13",
+    "typed-mapper": "^0.4.2",
     "typedi": "^0.10.0"
   },
   "devDependencies": {

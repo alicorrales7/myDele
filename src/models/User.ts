@@ -1,7 +1,7 @@
 import { prop, getModelForClass, Ref } from "@typegoose/typegoose"
-import { CarModel, Cars } from "./Car"
-import { Houses } from "./House"
-import { Phones } from "./Phone"
+import { Cars } from "./Car";
+import { Houses } from "./House";
+import { Phones } from "./Phone";
 
 
 export class Users {

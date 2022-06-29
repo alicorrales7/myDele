@@ -1,22 +1,27 @@
 import { Request,Response } from "express";
 import { Service } from "typedi";
+import { Cars } from "../models/Car";
 import CarService from "../services/carService";
+import { CarMap } from "../util/mapping";
 
 @Service()
 class CarController{
 
-    constructor(private readonly carService: CarService){}
+    constructor(private readonly carService: CarService, 
+        private mapperCar:CarMap,){}
 
    
     async getAllCars(res:Response){
         const resultFind = await this.carService.getAllCar();
+        
         return res.json(resultFind);
     }
 
     async getCar(req:Request, res:Response){
         const user = req.params.id
         const resultGetCar = await this.carService.getCar(user);
-        return res.json(resultGetCar)
+        
+        return res.json(resultGetCar);
     }
 
     async insertCar(req:Request, res:Response){

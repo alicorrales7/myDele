@@ -19,7 +19,7 @@ export class Cars {
     @prop()
     wheel:number
 
-    @prop({required:true})
+    @prop()
     title: string
 
     @prop()
@@ -33,6 +33,18 @@ export class Cars {
 
     @prop({required:true})
     userId: string
+
+    constructor(obj:any){
+        this.model= obj.model,
+        this.doors=obj.doors,
+        this.motor=obj.motor,
+        this.typeCar=obj.typeCar,
+        this.wheel=obj.wheel,
+        this.price=obj.price,
+        this.year=obj.year,
+        this.color=obj.color,
+        this.userId=obj.userId
+    }
     
 }
 

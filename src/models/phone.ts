@@ -1,5 +1,5 @@
 import { prop, getModelForClass } from "@typegoose/typegoose"
-import { userModel } from "./User"
+
 
 
 export class Phones {
