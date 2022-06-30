@@ -6,7 +6,10 @@ import { carRoutes } from './routes/carRoutes';
 import { houseRoutes } from './routes/houseRoutes';
 import morgan from 'morgan';
 import { phoneRoutes } from './routes/phoneRoutes';
+import { ServerErrorTry } from './util/error/serverError';
+
 export const app = express()
+
 app.use(morgan("dev"))
 
 connectDB();
@@ -16,9 +19,16 @@ carRoutes()
 houseRoutes()
 phoneRoutes()
 
+try {
+    const port = config.PORT
+    app.listen(port, () => {
+        console.log('\nServer running in ----> "http://localhost:3000"\n')
+    })
+} catch (err) {
+    throw new ServerErrorTry()
+} 
+  
 
-//Resolve the id conversion
-const port = config.PORT
-app.listen(port, ()=> {
-    console.log('\nServer running in ----> "http://localhost:3000"\n')
-})
+
+
+

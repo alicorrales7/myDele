@@ -23,7 +23,9 @@
     "mongoose": "^6.3.5",
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.1.13",
+    "regex": "^0.1.1",
     "typed-mapper": "^0.4.2",
+    "typed-regex": "^0.0.8",
     "typedi": "^0.10.0"
   },
   "devDependencies": {

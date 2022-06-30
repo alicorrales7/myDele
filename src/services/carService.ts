@@ -14,7 +14,8 @@ class CarService{
         return resultGetAllCar;
     }
 
-    async getCar(id:string):Promise<CarDTO|null>{
+    async getCar(id:string):Promise<CarDTO|null >{
+        
         const resultGetCar = this.carRepository.findById(id);
         return resultGetCar;
     }

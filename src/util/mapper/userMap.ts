@@ -23,7 +23,7 @@ export class UserMap{
          return returnDto;
     }
 
-    mapJsonToEntity(t:UserDTO):UserDTO{
+    mapJsonToDto(t:UserDTO):UserDTO{
         const mapper = {
             name: t?.name,
             sex: t?.sex,

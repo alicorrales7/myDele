@@ -26,7 +26,7 @@ class UserService{
     }
 
     async insertUsers(document:UserDTO){
-        const transp = this.userMap.mapJsonToEntity(document)
+        const transp = this.userMap.mapJsonToDto(document)
         const resultInsert = this.userRepository.insert(transp)
     }
 

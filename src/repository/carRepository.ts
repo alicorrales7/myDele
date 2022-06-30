@@ -4,6 +4,7 @@ import { CarModel} from "../models/Car";
 import { userModel } from "../models/User";
 import { CarDTO } from "../dto/carDTO";
 import { CarMap } from "../util/mapper/carMap";
+import { DataBaseError } from "../util/error/dataBaseError";
 
 
 @Service()

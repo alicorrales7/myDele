@@ -1,8 +1,18 @@
-import mongoose from "mongoose";
+import mongoose, { MongooseError } from "mongoose";
+import { DataBaseError } from "./error/dataBaseError";
+import DisconnectedError from "mongoose"
 
 export async function connectDB() {
 
- const db =  await mongoose.connect('mongodb://localhost:27020/MyDele');
-  console.log("database is connected", db.connection.db.databaseName )  
-}
+  try {
+    const db = await mongoose.connect('mongodb://localhost:27020/MyDele');
+    console.log("database is connected", db.connection.db.databaseName)
+  } catch (err) {
+    throw new DataBaseError();
+  }
+}   
 
+
+      
+    
+    

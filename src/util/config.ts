@@ -5,3 +5,5 @@ export default{
     number:34,
     string:"ALi"
     };
+
+ 
