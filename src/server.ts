@@ -7,10 +7,20 @@ import { houseRoutes } from './routes/houseRoutes';
 import morgan from 'morgan';
 import { phoneRoutes } from './routes/phoneRoutes';
 import { ServerErrorTry } from './util/error/serverError';
-
+import passport from 'passport';
+import session from 'express-session';
+import 'dotenv/config'
 export const app = express()
 
+
 app.use(morgan("dev"))
+app.use(passport.initialize());
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: true,
+    cookie: { secure: false }
+  }));
 
 connectDB();
 

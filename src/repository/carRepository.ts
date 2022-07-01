@@ -1,7 +1,7 @@
 import { TypedMapper } from "typed-mapper";
 import { Service } from "typedi";
-import { CarModel} from "../models/Car";
-import { userModel } from "../models/User";
+import { CarModel} from "../models/car";
+import { userModel } from "../models/user";
 import { CarDTO } from "../dto/carDTO";
 import { CarMap } from "../util/mapper/carMap";
 import { DataBaseError } from "../util/error/dataBaseError";

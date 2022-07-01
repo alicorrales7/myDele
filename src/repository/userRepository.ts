@@ -1,5 +1,5 @@
 import { Service, Container } from "typedi";
-import { userModel } from "../models/User";
+import { userModel } from "../models/user";
 import { UserMap } from "../util/mapper/userMap";
 import { UserDTO } from "../dto/userDTO";
 

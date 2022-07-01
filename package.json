@@ -14,7 +14,10 @@
   "dependencies": {
     "@typegoose/typegoose": "^9.9.0",
     "@types/bcrypt": "^5.0.0",
+    "@types/express-session": "^1.17.4",
     "@types/morgan": "^1.9.3",
+    "@types/passport": "^1.0.9",
+    "@types/passport-local": "^1.0.34",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "dto-mapping": "^1.1.0",
