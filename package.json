@@ -15,6 +15,7 @@
     "@typegoose/typegoose": "^9.9.0",
     "@types/bcrypt": "^5.0.0",
     "@types/morgan": "^1.9.3",
+    "@types/response-time": "^2.3.5",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "dto-mapping": "^1.1.0",
@@ -22,11 +23,14 @@
     "mongodb": "^4.6.0",
     "mongoose": "^6.3.5",
     "morgan": "^1.10.0",
+    "redis": "^4.1.1",
     "reflect-metadata": "^0.1.13",
     "regex": "^0.1.1",
+    "ts-dotenv": "^0.8.3",
     "typed-mapper": "^0.4.2",
     "typed-regex": "^0.0.8",
-    "typedi": "^0.10.0"
+    "typedi": "^0.10.0",
+    "winston": "^3.8.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

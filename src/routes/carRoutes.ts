@@ -2,6 +2,7 @@ import { app } from "../server";
 import  express  from "express";
 import Container from "typedi";
 import CarController from "../controllers/carController";
+import { logger } from "../util/logger";
 
 export function carRoutes(){
     app.use(express.json())
@@ -11,11 +12,12 @@ export function carRoutes(){
 
     app.get('/car', (req,res) => {
         const find = carController.getAllCars(res)
-        console.log(find)
-    })
+        console.log(find)})
     
     app.get('/car/:id', (req,res) => {
-        const findOne = carController.getCar( req,res)    
+        const findOne = carController.getCar( req,res)  
+        
+       const log = logger.info(" g")  
     })
 
     app.post('/car', (req,res) => {

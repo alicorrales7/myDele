@@ -1,10 +1,8 @@
-import { TypedMapper } from "typed-mapper";
 import { Service } from "typedi";
 import { CarModel} from "../models/Car";
 import { userModel } from "../models/User";
 import { CarDTO } from "../dto/carDTO";
 import { CarMap } from "../util/mapper/carMap";
-import { DataBaseError } from "../util/error/dataBaseError";
 
 
 @Service()
@@ -12,9 +10,9 @@ class CarRepository {
     constructor(private carMap: CarMap) { }
 
     async find() {
+        console.log(process.env.URL_MONGO);
         const find = await CarModel.find()
         const carArray: CarDTO[] = [];
-
         for (let i of find) {
             const vol = this.carMap.mapEntityToDto(i)
             carArray.push(vol)
@@ -26,6 +24,7 @@ class CarRepository {
         const convert = { "_id": id }
         const carfindById = await CarModel.findById(convert);
         const returnDto = this.carMap.mapEntityToDto(carfindById)
+        console.log(carfindById)
 
         return returnDto;
 
@@ -47,8 +46,14 @@ class CarRepository {
 
     async update(id: string, document: JSON) {
         const convert = { "_id": id }
+        const compId = await CarModel.findById(convert)
+        if(compId != null){
         const carUbdate = await CarModel.updateMany(convert, document);
         return carUbdate;
+        }else{
+            const parameter = {};
+            return parameter;
+        }
     }
 
     async delete(id: string) {

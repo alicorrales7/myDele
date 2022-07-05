@@ -1,0 +1,21 @@
+
+
+[2022-07-02T01:13:20.414Z] Behavior Logs info: Route tracking all get user
+[2022-07-02T01:13:37.628Z] Behavior Logs info: Follow Route insert user
+[2022-07-02T01:14:49.845Z] Behavior Logs info: Follow Route edit user
+[2022-07-02T01:15:12.428Z] Behavior Logs info: Route tracking get user
+[2022-07-02T01:16:04.027Z] Behavior Logs info: Follow Route delete user
+[2022-07-02T02:47:18.973Z] Behavior Logs info: Route tracking all get user
+[2022-07-02T02:47:18.993Z] Behavior Logs info: Controller tracking all get user
+[2022-07-02T02:47:49.211Z] Behavior Logs info: Route tracking get user
+[2022-07-02T02:47:49.219Z] Behavior Logs info: Controller tracking get user
+[2022-07-02T02:48:11.331Z] Behavior Logs info: Route tracking get user
+[2022-07-02T02:48:11.335Z] Behavior Logs info: Controller tracking get user
+[2022-07-02T02:49:23.282Z] Behavior Logs warn: Controller get user: Format Id Incorrecto
+[2022-07-02T02:49:23.283Z] Behavior Logs info: Route tracking get user
+[2022-07-02T03:24:08.803Z] Behavior Logs warn: Controller get user: Format Id Incorrecto
+[2022-07-02T03:24:08.810Z] Behavior Logs info: Route tracking get user
+[2022-07-02T03:24:23.079Z] Behavior Logs info: Service tracking all get user
+[2022-07-02T03:24:23.079Z] Behavior Logs info: Route tracking all get user
+[2022-07-02T03:24:23.104Z] Behavior Logs info: Repository tracking all get user
+[2022-07-02T03:24:23.105Z] Behavior Logs info: Controller tracking all get user
