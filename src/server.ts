@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { urlencoded } from 'express';
 import config from './util/config';
 import { connectDB } from './util/connection';
 import { userRoutes } from './routes/userRoutes';
@@ -7,27 +7,20 @@ import { houseRoutes } from './routes/houseRoutes';
 import morgan from 'morgan';
 import { phoneRoutes } from './routes/phoneRoutes';
 import { ServerErrorTry } from './util/error/serverError';
-import passport from 'passport';
-import session from 'express-session';
-import 'dotenv/config'
+import { localAuth } from './services/auth_service';
+import { middleware } from './util/middleware';
 export const app = express()
 
 
 app.use(morgan("dev"))
-app.use(passport.initialize());
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: true,
-    saveUninitialized: true,
-    cookie: { secure: false }
-  }));
 
 connectDB();
-
-userRoutes()
-carRoutes()
-houseRoutes()
-phoneRoutes()
+localAuth();
+middleware();
+userRoutes();
+carRoutes();
+houseRoutes();
+phoneRoutes();
 
 try {
     const port = config.PORT

@@ -2,7 +2,7 @@ import { app } from "../server";
 import  express  from "express";
 import Container, { Service } from "typedi";
 import UserController from "../controllers/userController";
- 
+import passport from "passport";
 
 export function userRoutes(){
     app.use(express.json())

@@ -1,6 +1,6 @@
 import { Service } from "typedi";
 import { phoneDTO } from "../../dto/phoneDTO";
-import { Phone } from "../../models/Phone";
+import { Phone } from "../../models/phone";
 
 @Service()
 export class PhoneMap{
