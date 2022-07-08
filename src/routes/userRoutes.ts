@@ -1,6 +1,6 @@
 import { app } from "../server";
 import  express  from "express";
-import Container, { Service } from "typedi";
+import Container from "typedi";
 import UserController from "../controllers/userController";
 import { logger } from "../util/logger"; 
 

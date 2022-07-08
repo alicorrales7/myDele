@@ -1,6 +1,6 @@
 import { Service } from "typedi";
 import { HouseDOT } from "../dto/houseDTO";
-import { houseModel } from "../models/House";
+import { houseModel } from "../models/house";
 import { userModel } from "../models/User";
 import { HouseMap } from "../util/mapper/houseMap";
 

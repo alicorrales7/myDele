@@ -1,5 +1,5 @@
 import { HouseDOT } from "../../dto/houseDTO";
-import { House } from "../../models/House";
+import { House } from "../../models/house";
 import { Service } from "typedi";
 
 

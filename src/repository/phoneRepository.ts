@@ -1,6 +1,6 @@
 import { Service } from "typedi";
 import { phoneDTO } from "../dto/phoneDTO";
-import { phoneModel } from "../models/Phone";
+import { phoneModel } from "../models/phone";
 import { userModel } from "../models/User";
 import { PhoneMap } from "../util/mapper/phoneMap";
 

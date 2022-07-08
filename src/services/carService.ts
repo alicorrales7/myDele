@@ -2,12 +2,15 @@ import { Service } from "typedi";
 import { CarDTO } from "../dto/carDTO";
 import CarRepository from "../repository/carRepository";
 import { CarMap } from "../util/mapper/carMap";
+import { createClient } from 'redis';
 
 @Service()
 class CarService{
 
-    constructor(private readonly carRepository: CarRepository,
+    constructor(private readonly carRepository: CarRepository, 
         private carMap: CarMap){}
+    
+        
 
     async getAllCar(){
         const resultGetAllCar = this.carRepository.find()

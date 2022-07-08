@@ -1,18 +1,17 @@
 import { prop, getModelForClass, Ref } from "@typegoose/typegoose"
-import { Car } from "./Car";
-import { House } from "./House";
-import { Phone } from "./Phone";
-
+import { Car } from "./car";
+import { House } from "./house";
+import { Phone } from "./phone";
 
 export class User {
 
-    @prop({ require: true })
+    @prop()
     name: string
 
     @prop()
     sex: string
 
-    @prop({ required: true })
+    @prop()
     email: string
 
     @prop()

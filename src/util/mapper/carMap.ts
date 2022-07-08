@@ -1,6 +1,6 @@
 import { Service } from "typedi";
 import { CarDTO } from "../../dto/carDTO";
-import { Car } from "../../models/Car";
+import { Car } from "../../models/car";
 
 @Service()
 export class CarMap{

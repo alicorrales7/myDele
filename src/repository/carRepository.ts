@@ -1,5 +1,5 @@
 import { Service } from "typedi";
-import { CarModel} from "../models/Car";
+import { CarModel} from "../models/car";
 import { userModel } from "../models/User";
 import { CarDTO } from "../dto/carDTO";
 import { CarMap } from "../util/mapper/carMap";

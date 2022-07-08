@@ -19,3 +19,31 @@
 [2022-07-02T03:24:23.079Z] Behavior Logs info: Route tracking all get user
 [2022-07-02T03:24:23.104Z] Behavior Logs info: Repository tracking all get user
 [2022-07-02T03:24:23.105Z] Behavior Logs info: Controller tracking all get user
+[2022-07-06T02:57:38.057Z] Behavior Logs warn: Controller get user: Format Id Incorrecto
+[2022-07-06T02:57:38.065Z] Behavior Logs info: Route tracking get user
+[2022-07-08T00:47:07.306Z] Behavior Logs info: Follow Service insert user
+[2022-07-08T00:50:09.110Z] Behavior Logs info: Service tracking all get user
+[2022-07-08T00:50:09.111Z] Behavior Logs info: Route tracking all get user
+[2022-07-08T00:50:09.125Z] Behavior Logs info: Repository tracking all get user
+[2022-07-08T00:50:09.126Z] Behavior Logs info: Controller tracking all get user
+[2022-07-08T00:51:08.116Z] Behavior Logs info: Follow Service insert user
+[2022-07-08T00:57:23.663Z] Behavior Logs info: Follow Service insert user
+[2022-07-08T00:57:23.665Z] Behavior Logs info: Follow Route insert user
+[2022-07-08T00:57:23.680Z] Behavior Logs info: Follow Controller insert user
+[2022-07-08T00:57:23.689Z] Behavior Logs info: Follow Repository insert user
+[2022-07-08T01:05:23.185Z] Behavior Logs info: Follow Service insert user
+[2022-07-08T01:05:23.186Z] Behavior Logs info: Follow Route insert user
+[2022-07-08T01:05:23.200Z] Behavior Logs info: Follow Controller insert user
+[2022-07-08T01:05:23.208Z] Behavior Logs info: Follow Repository insert user
+[2022-07-08T01:17:45.207Z] Behavior Logs info: Follow Service insert user
+[2022-07-08T01:17:45.209Z] Behavior Logs info: Follow Route insert user
+[2022-07-08T01:17:45.221Z] Behavior Logs info: Follow Controller insert user
+[2022-07-08T01:17:45.229Z] Behavior Logs info: Follow Repository insert user
+[2022-07-08T01:47:06.435Z] Behavior Logs info: Service Tracking get all user products
+[2022-07-08T01:47:06.436Z] Behavior Logs info: Route Tracking get all user products
+[2022-07-08T01:47:06.485Z] Behavior Logs info: Repository Tracking get all user products
+[2022-07-08T01:47:06.485Z] Behavior Logs info: Controller Tracking get all user products
+[2022-07-08T01:48:36.780Z] Behavior Logs info: Service Tracking get all user products
+[2022-07-08T01:48:36.780Z] Behavior Logs info: Route Tracking get all user products
+[2022-07-08T01:48:36.794Z] Behavior Logs info: Repository Tracking get all user products
+[2022-07-08T01:48:36.795Z] Behavior Logs info: Controller Tracking get all user products
