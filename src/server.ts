@@ -7,7 +7,6 @@ import morgan from 'morgan';
 import { phoneRoutes } from './routes/phoneRoutes';
 import { ServerErrorTry } from './util/error/serverError';
 import * as dotenv from "dotenv";
-
 export const app = express()
 
 
@@ -15,7 +14,6 @@ app.use(morgan("dev"))
 
 dotenv.config();
 connectDB();
-
 userRoutes()
 carRoutes()
 houseRoutes()

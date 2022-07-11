@@ -1,5 +1,4 @@
 [{
-    "userId":"id",
     "name": "Ali Corrales",
     "sex": "male",
     "email": "alicorrales2013@gmail.com ",
@@ -13,7 +12,10 @@
         }
     },
     "username": "acorrales",
-    "password": "12345678"
+    "password": "12345678",
+    "productCars":[],
+    "productHouses":[],
+    "productPhones":[]
 },
 {
     "userId":"id",
