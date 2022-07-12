@@ -1,7 +1,11 @@
 import { Service } from "typedi";
 import { HouseDOT } from "../dto/houseDTO";
 import { houseModel } from "../models/house";
+<<<<<<< HEAD
 import { userModel } from "../models/User";
+=======
+import { userModel } from "../models/user";
+>>>>>>> 7aa03c03296a3751dc43d639fe66420baa932b5e
 import { HouseMap } from "../util/mapper/houseMap";
 import { houseCacheService } from "../services/cache/entitysCacheService/houseCacheService";
 @Service()

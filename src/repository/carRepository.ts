@@ -1,6 +1,10 @@
 import { Service } from "typedi";
 import { CarModel} from "../models/car";
+<<<<<<< HEAD
 import { userModel } from "../models/User";
+=======
+import { userModel } from "../models/user";
+>>>>>>> 7aa03c03296a3751dc43d639fe66420baa932b5e
 import { CarDTO } from "../dto/carDTO";
 import { CarMap } from "../util/mapper/carMap";
 import { carCacheService } from "../services/cache/entitysCacheService/carCacheService";

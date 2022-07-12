@@ -2,6 +2,10 @@ import { prop, getModelForClass, Ref } from "@typegoose/typegoose"
 import { Car } from "./car";
 import { House } from "./house";
 import { Phone } from "./phone";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7aa03c03296a3751dc43d639fe66420baa932b5e
 
 export class User {
 
