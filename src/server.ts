@@ -18,9 +18,8 @@ userRoutes()
 carRoutes()
 houseRoutes()
 phoneRoutes()
-
 try {
-    app.listen(process.env.PORT, () => {
+    app.listen(3000, () => {
         console.log('\nServer running in ----> "http://localhost:3000"\n')
     })
 } catch (err) {

@@ -39,7 +39,6 @@ class UserService{
         const resultUpdate = this.userRepository.update(id,document)
         const logService = logger.info("Follow Service edit user")
     }
-
     async deleteUser(id:string){
         const resultDelete = this.userRepository.delete(id)
         const logService = logger.info("Follow Service delete user")

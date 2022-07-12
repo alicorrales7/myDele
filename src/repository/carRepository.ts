@@ -3,14 +3,15 @@ import { CarModel} from "../models/car";
 import { userModel } from "../models/User";
 import { CarDTO } from "../dto/carDTO";
 import { CarMap } from "../util/mapper/carMap";
-
+import { carCacheService } from "../services/cache/entitysCacheService/carCacheService";
+import { logger } from "../util/logger";
 
 @Service()
 class CarRepository {
-    constructor(private carMap: CarMap) { }
+    constructor(private carMap: CarMap, private carcache:carCacheService) { }
 
     async find() {
-        console.log(process.env.URL_MONGO);
+        
         const find = await CarModel.find()
         const carArray: CarDTO[] = [];
         for (let i of find) {
@@ -24,6 +25,7 @@ class CarRepository {
         const convert = { "_id": id }
         const carfindById = await CarModel.findById(convert);
         const returnDto = this.carMap.mapEntityToDto(carfindById)
+        const readCachecar = await this.carcache.read(id);
         console.log(carfindById)
 
         return returnDto;
@@ -35,6 +37,8 @@ class CarRepository {
         const carInserts = await CarModel.insertMany(document);
         const firstDocument = carInserts[0]
         const userId = firstDocument?.userId
+        const setcarcache = await this.carcache.set(userId,firstDocument);
+        const logerInsertCar = logger.info('Car Saver in redis'+ setcarcache);
 
         for (let i of carInserts) {
             const insertUserModel = await userModel.updateMany({ _id: userId }, {
