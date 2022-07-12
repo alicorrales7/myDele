@@ -3,11 +3,12 @@ import { CarModel} from "../models/car";
 import { userModel } from "../models/User";
 import { CarDTO } from "../dto/carDTO";
 import { CarMap } from "../util/mapper/carMap";
+import { carCacheService } from "../services/cache/entitysCacheService/carCacheService";
 
 
 @Service()
 class CarRepository {
-    constructor(private carMap: CarMap) { }
+    constructor(private carMap: CarMap,private carCacheService: carCacheService) { }
 
     async find() {
         console.log(process.env.URL_MONGO);
@@ -35,6 +36,8 @@ class CarRepository {
         const carInserts = await CarModel.insertMany(document);
         const firstDocument = carInserts[0]
         const userId = firstDocument?.userId
+
+        const redis = await this.carCacheService.set(userId,firstDocument)
 
         for (let i of carInserts) {
             const insertUserModel = await userModel.updateMany({ _id: userId }, {

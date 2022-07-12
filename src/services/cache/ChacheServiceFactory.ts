@@ -1,4 +1,3 @@
-import { env } from "process";
 import Container, { Service } from "typedi";
 import { CacheService } from "./cacheService";
 import { RedisAdapter } from "./redisAdapter";

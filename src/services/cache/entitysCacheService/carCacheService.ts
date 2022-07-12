@@ -1,7 +1,9 @@
+import { Service } from "typedi";
+import { CarDTO } from "../../../dto/carDTO";
 import { CarMap } from "../../../util/mapper/carMap";
 import { CacheService } from "../cacheService";
 
-
+@Service()
 export class carCacheService{
     private prefix = "product_";
 
@@ -17,8 +19,8 @@ export class carCacheService{
         
     }
 
-    async set(productId:string,value:string){
-        const valueConvert = JSON.stringify(value)
+    async set(productId:string,value:CarDTO){
+        const valueConvert = value.toString()
         const json = await this.cacheService.setCache(this.prefix + productId, valueConvert)
 
         return json;
