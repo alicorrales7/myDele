@@ -1,3 +1,4 @@
+import { get } from "mongoose";
 import { createClient } from "redis";
 import { Service } from "typedi";
 import { CacheAdapterInterface } from "../../interface/CacheServiceInterface";
@@ -25,6 +26,7 @@ export class RedisAdapter implements CacheAdapterInterface{
 
     async set(index:string,value:string) {
         const client = await this.create()
+        console.log(index + value);
         const setElement = await client.set(index,value)
         return setElement;
     }

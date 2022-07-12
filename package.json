@@ -14,8 +14,16 @@
   "dependencies": {
     "@typegoose/typegoose": "^9.9.0",
     "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/express-session": "^1.17.4",
     "@types/morgan": "^1.9.3",
+<<<<<<< HEAD
+    "@types/redis": "^4.0.11",
     "@types/response-time": "^2.3.5",
+=======
+    "@types/passport": "^1.0.9",
+    "@types/passport-local": "^1.0.34",
+>>>>>>> 7aa03c03296a3751dc43d639fe66420baa932b5e
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "dto-mapping": "^1.1.0",
@@ -26,6 +34,10 @@
     "redis": "^4.1.1",
     "reflect-metadata": "^0.1.13",
     "regex": "^0.1.1",
+<<<<<<< HEAD
+    "response-time": "^2.3.2",
+=======
+>>>>>>> 7aa03c03296a3751dc43d639fe66420baa932b5e
     "ts-dotenv": "^0.8.3",
     "typed-mapper": "^0.4.2",
     "typed-regex": "^0.0.8",

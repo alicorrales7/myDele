@@ -1,6 +1,6 @@
 import { Service } from "typedi";
 import { UserDTO } from "../../dto/userDTO";
-import { User } from "../../models/User";
+import { User } from "../../models/user";
 
 @Service()
 export class UserMap{

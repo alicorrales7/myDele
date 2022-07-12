@@ -1,11 +1,12 @@
 import { Service } from "typedi";
 import { CacheAdapterInterface } from "../../interface/CacheServiceInterface";
-
+import { CacheServiceFactory } from "./ChacheServiceFactory";
+import { RedisAdapter } from "./redisAdapter";
 @Service()
 export class CacheService{
-    adapter: CacheAdapterInterface;
+    adapter: RedisAdapter;
 
-    constructor(cacheAdapter:CacheAdapterInterface){
+    constructor(cacheAdapter:RedisAdapter){
         this.adapter= cacheAdapter
     }
 
