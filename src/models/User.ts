@@ -3,6 +3,7 @@ import { Car } from "./car";
 import { House } from "./house";
 import { Phone } from "./phone";
 
+
 export class User {
 
     @prop()

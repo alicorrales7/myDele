@@ -59,4 +59,33 @@
 [2022-07-08T02:20:36.648Z] Behavior Logs info: Follow Route insert user
 [2022-07-08T02:20:36.651Z] Behavior Logs info: Follow Controller insert user
 [2022-07-08T02:20:36.653Z] Behavior Logs info: Follow Repository insert user
+<<<<<<< HEAD
 [2022-07-11T21:43:44.648Z] Behavior Logs info:  g
+=======
+[2022-07-11T20:47:34.929Z] Behavior Logs info: Follow Service insert user
+[2022-07-11T20:49:07.547Z] Behavior Logs info: Follow Service insert user
+[2022-07-11T20:51:03.567Z] Behavior Logs info: Follow Service insert user
+[2022-07-11T20:53:32.686Z] Behavior Logs info: Follow Service insert user
+[2022-07-11T20:53:32.687Z] Behavior Logs info: Follow Route insert user
+[2022-07-11T20:53:32.703Z] Behavior Logs info: Follow Controller insert user
+[2022-07-11T20:53:32.731Z] Behavior Logs info: Follow Repository insert user
+[2022-07-11T20:54:30.314Z] Behavior Logs info: Service tracking all get user
+[2022-07-11T20:54:30.314Z] Behavior Logs info: Route tracking all get user
+[2022-07-11T20:54:30.329Z] Behavior Logs info: Repository tracking all get user
+[2022-07-11T20:54:30.329Z] Behavior Logs info: Controller tracking all get user
+>>>>>>> d28ebad128d0a6b87097a08257f7bbc44c1015fa
+[2022-07-12T19:11:08.680Z] Behavior Logs info: Service tracking all get user
+[2022-07-12T19:11:08.681Z] Behavior Logs info: Route tracking all get user
+[2022-07-12T19:11:08.701Z] Behavior Logs info: Repository tracking all get user
+[2022-07-12T19:11:08.701Z] Behavior Logs info: Controller tracking all get user
+[2022-07-12T19:14:34.977Z] Behavior Logs info: Car Saver in redisOK
+[2022-07-12T19:15:48.492Z] Behavior Logs info:  g
+[2022-07-12T19:16:12.604Z] Behavior Logs info:  g
+[2022-07-12T19:16:32.085Z] Behavior Logs info:  g
+[2022-07-12T19:16:35.512Z] Behavior Logs info:  g
+[2022-07-12T19:16:36.471Z] Behavior Logs info:  g
+[2022-07-12T19:16:37.288Z] Behavior Logs info:  g
+[2022-07-12T19:16:39.406Z] Behavior Logs info:  g
+[2022-07-12T19:16:40.206Z] Behavior Logs info:  g
+[2022-07-12T19:16:41.013Z] Behavior Logs info:  g
+[2022-07-12T19:16:41.885Z] Behavior Logs info:  g

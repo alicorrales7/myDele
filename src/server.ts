@@ -1,4 +1,5 @@
-import express from 'express';
+import express, { urlencoded } from 'express';
+import config from './util/config';
 import { connectDB } from './util/connection';
 import { userRoutes } from './routes/userRoutes';
 import { carRoutes } from './routes/carRoutes';
@@ -14,13 +15,17 @@ app.use(morgan("dev"))
 
 dotenv.config();
 connectDB();
-userRoutes()
-carRoutes()
-houseRoutes()
-phoneRoutes()
+
+
+
+userRoutes();
+carRoutes();
+houseRoutes();
+phoneRoutes();
+
 
 try {
-    app.listen(process.env.PORT, () => {
+    app.listen(3000, () => {
         console.log('\nServer running in ----> "http://localhost:3000"\n')
     })
 } catch (err) {
