@@ -26,7 +26,6 @@ export class RedisAdapter implements CacheAdapterInterface{
 
     async set(index:string,value:string) {
         const client = await this.create()
-        console.log(index + value);
         const setElement = await client.set(index,value)
         return setElement;
     }

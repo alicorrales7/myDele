@@ -89,3 +89,111 @@
 [2022-07-12T19:16:40.206Z] Behavior Logs info:  g
 [2022-07-12T19:16:41.013Z] Behavior Logs info:  g
 [2022-07-12T19:16:41.885Z] Behavior Logs info:  g
+[2022-07-13T19:05:20.499Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:05:20.500Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:05:20.584Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:05:20.584Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:06:01.790Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:06:01.792Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:06:01.869Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:06:01.869Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:08:05.379Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:08:05.380Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:08:05.454Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:08:05.455Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:34:14.753Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:34:14.754Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:34:14.832Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:34:14.832Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:34:14.852Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:34:14.852Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:34:14.866Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:34:14.867Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:36:00.084Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:36:00.086Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:36:00.162Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:36:00.162Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:36:00.183Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:36:00.184Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:36:00.195Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:36:00.196Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:37:05.882Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:37:05.884Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:37:05.968Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:37:05.968Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:37:05.983Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:37:05.983Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:37:05.991Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:37:05.991Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:52:41.713Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:52:41.714Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:52:41.788Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:52:41.788Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T19:52:41.811Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T19:52:41.811Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T19:52:41.822Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T19:52:41.822Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T20:01:51.480Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T20:01:51.481Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T20:01:51.563Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T20:01:51.563Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T20:01:51.580Z] Behavior Logs info: Service tracking get user
+[2022-07-13T20:01:51.580Z] Behavior Logs info: Route tracking get user
+[2022-07-13T20:01:51.589Z] Behavior Logs info: Repository tracking get user
+[2022-07-13T20:01:51.589Z] Behavior Logs info: Controller tracking get user
+[2022-07-13T20:01:51.626Z] Behavior Logs info: Follow Service insert user
+[2022-07-13T20:01:51.627Z] Behavior Logs info: Follow Route insert user
+[2022-07-13T20:01:51.637Z] Behavior Logs info: Follow Controller insert user
+[2022-07-13T20:01:52.147Z] Behavior Logs info: Follow Repository insert user
+[2022-07-13T20:03:23.657Z] Behavior Logs info: Follow Service insert user
+[2022-07-13T20:03:23.657Z] Behavior Logs info: Follow Route insert user
+[2022-07-13T20:03:23.660Z] Behavior Logs info: Follow Controller insert user
+[2022-07-13T20:03:23.663Z] Behavior Logs info: Follow Repository insert user
+[2022-07-13T20:04:36.470Z] Behavior Logs info: Service tracking get user
+[2022-07-13T20:04:36.471Z] Behavior Logs info: Route tracking get user
+[2022-07-13T20:04:36.476Z] Behavior Logs info: Repository tracking get user
+[2022-07-13T20:04:36.476Z] Behavior Logs info: Controller tracking get user
+[2022-07-13T20:06:36.044Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T20:06:36.045Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T20:06:36.109Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T20:06:36.109Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T20:06:36.129Z] Behavior Logs info: Service tracking get user
+[2022-07-13T20:06:36.129Z] Behavior Logs info: Route tracking get user
+[2022-07-13T20:06:36.136Z] Behavior Logs info: Repository tracking get user
+[2022-07-13T20:06:36.136Z] Behavior Logs info: Controller tracking get user
+[2022-07-13T20:06:36.164Z] Behavior Logs info: Follow Service insert user
+[2022-07-13T20:06:36.164Z] Behavior Logs info: Follow Route insert user
+[2022-07-13T20:06:36.175Z] Behavior Logs info: Follow Controller insert user
+[2022-07-13T20:06:36.683Z] Behavior Logs info: Follow Repository insert user
+[2022-07-13T20:09:46.403Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T20:09:46.404Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T20:09:46.480Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T20:09:46.480Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T20:09:46.500Z] Behavior Logs info: Service tracking get user
+[2022-07-13T20:09:46.500Z] Behavior Logs info: Route tracking get user
+[2022-07-13T20:09:46.511Z] Behavior Logs info: Repository tracking get user
+[2022-07-13T20:09:46.511Z] Behavior Logs info: Controller tracking get user
+[2022-07-13T20:09:46.550Z] Behavior Logs info: Follow Service insert user
+[2022-07-13T20:09:46.550Z] Behavior Logs info: Follow Route insert user
+[2022-07-13T20:09:46.561Z] Behavior Logs info: Follow Controller insert user
+[2022-07-13T20:09:46.582Z] Behavior Logs info: Follow Repository insert user
+[2022-07-13T20:09:46.584Z] Behavior Logs info: Service tracking get user
+[2022-07-13T20:09:46.584Z] Behavior Logs info: Route tracking get user
+[2022-07-13T20:09:46.596Z] Behavior Logs info: Repository tracking get user
+[2022-07-13T20:09:46.597Z] Behavior Logs info: Controller tracking get user
+[2022-07-13T20:21:09.328Z] Behavior Logs info: Service tracking all get user
+[2022-07-13T20:21:09.330Z] Behavior Logs info: Route tracking all get user
+[2022-07-13T20:21:09.490Z] Behavior Logs info: Repository tracking all get user
+[2022-07-13T20:21:09.490Z] Behavior Logs info: Controller tracking all get user
+[2022-07-13T20:21:09.543Z] Behavior Logs info: Service tracking get user
+[2022-07-13T20:21:09.543Z] Behavior Logs info: Route tracking get user
+[2022-07-13T20:21:09.557Z] Behavior Logs info: Repository tracking get user
+[2022-07-13T20:21:09.557Z] Behavior Logs info: Controller tracking get user
+[2022-07-13T20:21:09.610Z] Behavior Logs info: Follow Service insert user
+[2022-07-13T20:21:09.610Z] Behavior Logs info: Follow Route insert user
+[2022-07-13T20:21:09.620Z] Behavior Logs info: Follow Controller insert user
+[2022-07-13T20:21:09.626Z] Behavior Logs info: Follow Repository insert user
+[2022-07-13T20:21:09.627Z] Behavior Logs info: Service tracking get user
+[2022-07-13T20:21:09.627Z] Behavior Logs info: Route tracking get user
+[2022-07-13T20:21:09.631Z] Behavior Logs info: Repository tracking get user
+[2022-07-13T20:21:09.631Z] Behavior Logs info: Controller tracking get user
