@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon",
     "start": "tsc && node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+    
   },
   "keywords": [],
   "author": "",
@@ -46,5 +47,15 @@
     "ts-jest": "^28.0.5",
     "ts-node": "^10.8.0",
     "tsc": "^2.0.4"
+  },
+  "jest":{
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/",
+      "/dist/"
+      ]
   }
 }
