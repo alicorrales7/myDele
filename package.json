@@ -40,12 +40,12 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
-    "@types/jest": "^28.1.5",
+    "@types/jest": "^28.1.6",
     "@types/node": "^17.0.39",
     "class-transformer": "^0.5.1",
     "jest": "^28.1.2",
     "nodemon": "^2.0.16",
-    "ts-jest": "^28.0.5",
+    "ts-jest": "^28.0.7",
     "ts-node": "^10.8.0",
     "tsc": "^2.0.4"
   },
