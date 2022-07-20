@@ -1,13 +1,13 @@
 import { Service } from "typedi";
 import { phoneDTO } from "../dto/phoneDTO";
 import { phoneModel } from "../models/phone";
-
+import { phoneCacheService } from "../services/cache/entitysCacheService/phoneCacheService";
 import { userModel } from "../models/user";
 import { PhoneMap } from "../util/mapper/phoneMap";
 
 @Service()
 class PhoneRepository {
-    constructor(private phoneMap: PhoneMap){}
+    constructor(private phoneMap: PhoneMap,private phonecache: phoneCacheService){}
 
     async find() {
         const find = await phoneModel.find()
@@ -22,13 +22,24 @@ class PhoneRepository {
 
     async findById(id: string):Promise<phoneDTO | null> {
         const convert = { "_id": id }
+        const phoneCacheId =  this.phonecache.read(id)
+        if(!phoneCacheId){
         const phonefindById = await phoneModel.findById(convert);
         const returnDto = this.phoneMap.mapEntityToDto(phonefindById)
-
         return returnDto;
+        }
+        else{
+            return phoneCacheId
+        }
     }
 
     async insert(document: phoneDTO) {
+        const PhoneDTOtoJson = this.phoneMap.mapJsonToEntity(document);
+        let IdPhoneToString = PhoneDTOtoJson.userId.toString();
+
+        const ReadPhoneCache = this.phonecache.read(IdPhoneToString);
+
+        if(!ReadPhoneCache){
         const phoneInserts = await phoneModel.insertMany(document);
         const firstDocument = phoneInserts[0];
         const userId = firstDocument?.userId
@@ -40,6 +51,8 @@ class PhoneRepository {
         }
         return phoneInserts;
     }
+    else return this.phonecache.set(IdPhoneToString,document)
+}
 
 
     async update(id: string, document: JSON) {
