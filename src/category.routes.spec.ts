@@ -1,8 +1,6 @@
 import supertest from "supertest";
 import { app } from "./server";
 
-
-
 describe("Get /user", () => {
     test("should respond whit a 200 status code", async()=>{
         const response = await supertest(app).get("/user").send()
