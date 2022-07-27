@@ -5,7 +5,7 @@ import { CarMap } from "../util/mapper/carMap";
 import { createClient } from 'redis';
 
 @Service()
-class CarService{
+export class CarService{
 
     constructor(private readonly carRepository: CarRepository, 
         private carMap: CarMap){}

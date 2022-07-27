@@ -69,5 +69,35 @@ describe("Get /user", () => {
             }
         });
     })
-    
+
 })
+    
+describe("test",async () => {
+    test("should return correct results",async () => {
+
+    })
+})
+
+class CarService{
+    constructor(){}
+
+     getAllCar(){
+        return console.log("Get all car...")
+    }
+
+    getCar(){
+        return console.log("Get car...")
+    }
+
+    insertCars(){
+        return console.log("InsertCar car...")
+    }
+
+    updateCar(){
+        return console.log("Ubdate car...")
+    }
+
+    deleteCar(){
+        return console.log("DeleteCar car...")
+    }
+}
